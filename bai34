@@ -1,0 +1,15 @@
+Tôi hiểu bạn muốn so sánh khai báo abstract và virtual cho thuộc tính và phương thức của một lớp trong C#. Dưới đây là một so sánh chi tiết giữa hai cách khai báo này:
+
+Khai báo abstract:
+
+Lớp abstract không thể được khởi tạo trực tiếp, chỉ có thể được kế thừa bởi các lớp khác.
+Thuộc tính và phương thức abstract không có phần thân (body) và phải được lớp kế thừa cài đặt.
+Các lớp kế thừa lớp abstract phải cài đặt tất cả các thành viên abstract.
+Khi kế thừa, các lớp con phải cung cấp cài đặt cho các thành viên abstract.
+Khai báo virtual:
+
+Lớp có phương thức virtual có thể được khởi tạo trực tiếp.
+Phương thức virtual có phần thân (body) và có thể được ghi đè (override) bởi các lớp con.
+Các lớp con có thể ghi đè các phương thức virtual trong lớp cha.
+Khi ghi đè, các lớp con cung cấp cài đặt riêng cho các phương thức virtual.
+Tóm lại, abstract được sử dụng khi muốn định nghĩa một giao diện (interface) mà các lớp con phải implement, còn virtual được sử dụng khi muốn cung cấp một cài đặt mặc định mà các lớp con có thể ghi đè.
