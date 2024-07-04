@@ -1,0 +1,11 @@
+Khi bạn chuyển `public virtual string Name { get; set; }` thành `public string Name;` trong lớp `Person`, thì sẽ xảy ra những thay đổi sau:
+
+1. **Tính đóng gói (Encapsulation)**: Với định nghĩa `public string Name;`, bạn đã mất tính đóng gói. Trước đây, khi sử dụng `get` và `set`, bạn có thể kiểm soát việc truy cập và thay đổi giá trị của `Name`. Nhưng với định nghĩa mới, `Name` trở thành một trường công khai (public field) và có thể được truy cập và sửa đổi trực tiếp từ bên ngoài lớp, làm mất đi tính đóng gói.
+
+2. **Kiểm soát giá trị của Name**: Trong lớp `Student`, bạn đã ghi đè phương thức `get` và `set` của `Name` để kiểm soát giá trị. Với định nghĩa `public string Name;` trong lớp `Person`, bạn sẽ mất khả năng này. Việc kiểm tra và xác thực giá trị của `Name` không còn được thực hiện.
+
+3. **Tính kế thừa và ghi đè**: Khi bạn ghi đè `Name` trong lớp `Student`, bạn đã sử dụng tính kế thừa và ghi đè của OOP. Nếu bạn chuyển `Name` thành trường công khai, thì việc ghi đè trong lớp `Student` sẽ không còn ý nghĩa.
+
+Tóm lại, việc bỏ `get` và `set` trong định nghĩa `Name` sẽ làm mất tính đóng gói, kiểm soát giá trị và tính kế thừa/ghi đè. Điều này có thể dẫn đến các vấn đề như dữ liệu bị truy cập và sửa đổi trái phép, hoặc không thể kiểm tra và đảm bảo tính hợp lệ của dữ liệu.
+
+Vì vậy, trong hầu hết các trường hợp, bạn nên sử dụng `get` và `set` để định nghĩa các thuộc tính trong lập trình hướng đối tượng, vì chúng cung cấp nhiều lợi ích về mặt thiết kế và quản lý dữ liệu.
